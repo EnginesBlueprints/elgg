@@ -150,7 +150,7 @@
           "cron_job": "/cron/fifteenmin/",
           "title": "15min",
           "action_type": "web",
-          "when": "15/* * * * * "
+          "when": "*/15 * * * * "
         }
       },
       {
@@ -160,7 +160,7 @@
           "cron_job": "/cron/halfhour/",
           "title": "halfhr",
           "action_type": "web",
-          "when": "30/* * * * *"
+          "when": "*/30 * * * *"
         }
       },
       {
