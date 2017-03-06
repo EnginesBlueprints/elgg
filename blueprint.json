@@ -46,7 +46,7 @@
       "continuous_deployment": false,
       "install_form_comment": "",
       "first_run_url": "_Engines_Builder(http_protocol)://_Engines_Builder(fqdn)/install.php",
-      "installation_report": "goto _Engines_Builder(http_protocol)://_Engines_Builder(fqdn)/install.php\r\ndata dir is /home/fs/persistent/"
+      "installation_report": "goto _Engines_Builder(http_protocol)://_Engines_Builder(fqdn)/install.php\r\n**Database installation**\r\n\r\nDatabase Username _Engines_Environment(dbuser)\r\nDatabase name _Engines_Environment(dbname)\r\nDatabase Password _Engines_Environment(dbpasswd)\r\nDatabase Host _Engines_Environment(dbhost)\r\nPort leave blank\r\nDatabase prefix table elgg_\r\nSelect your time zone\r\n\r\nClick Next \r\n\r\n**Configure site**\r\nSet your \r\nSite Name\r\nand\r\nSite Email Address\r\nleave Site URL as in\r\nData Directory is /home/fs/persistent/\r\n\r\nSet your desired Default Site Access\r\n\r\n**Create admin account**"
     },
     "ports": [
 
@@ -127,10 +127,10 @@
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
-          "cron_job": "* * * * * /cron/minute",
+          "cron_job": "/cron/minute",
           "title": "1min",
           "action_type": "web",
-          "when": ""
+          "when": "*/1 * * * *"
         }
       },
       {
@@ -138,29 +138,29 @@
         "type_path": "cron",
         "variables": {
           "action_type": "web",
-          "cron_job": "*/5 * * * * /cron/fiveminute",
+          "cron_job": "/cron/fiveminute",
           "title": "5min",
-          "when": ""
+          "when": "*/5 * * * * "
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
-          "cron_job": "15,30,45,59 * * * *  /cron/fifteenmin/",
+          "cron_job": "/cron/fifteenmin/",
           "title": "15min",
           "action_type": "web",
-          "when": ""
+          "when": "15/* * * * * "
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
-          "cron_job": "30,59 * * * * /cron/halfhour/",
+          "cron_job": "/cron/halfhour/",
           "title": "halfhr",
           "action_type": "web",
-          "when": ""
+          "when": "30/* * * * *"
         }
       },
       {
@@ -168,49 +168,49 @@
         "type_path": "cron",
         "variables": {
           "cron_job": "hourly",
-          "title": "@hourly  /cron/hourly",
+          "title": "/cron/hourly",
           "action_type": "web",
-          "when": ""
+          "when": "@hourly "
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
-          "cron_job": "@daily  /cron/daily",
+          "cron_job": "/cron/daily",
           "title": "daily",
           "action_type": "web",
-          "when": ""
+          "when": "@daily  "
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
-          "cron_job": "@weekly  /cron/weekly",
+          "cron_job": "/cron/weekly",
           "title": "weekly",
           "action_type": "web",
-          "when": ""
+          "when": "@weekly  "
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
-          "cron_job": "@monthly  /cron/monthly",
+          "cron_job": "/cron/monthly",
           "title": "monthly",
           "action_type": "web",
-          "when": ""
+          "when": "@monthly  "
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
-          "cron_job": "@yearly  /cron/yearly",
+          "cron_job": "/cron/yearly",
           "title": "yearly",
           "action_type": "web",
-          "when": ""
+          "when": "@yearly  "
         }
       },
       {
