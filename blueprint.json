@@ -170,7 +170,7 @@
           "cron_job": "hourly",
           "title": "/cron/hourly",
           "action_type": "web",
-          "when": "@hourly "
+          "when": "* */1 * * * "
         }
       },
       {
@@ -180,7 +180,7 @@
           "cron_job": "/cron/daily",
           "title": "daily",
           "action_type": "web",
-          "when": "@daily  "
+          "when": "* * */1 * * *"
         }
       },
       {
@@ -190,7 +190,7 @@
           "cron_job": "/cron/weekly",
           "title": "weekly",
           "action_type": "web",
-          "when": "@weekly  "
+          "when": "* * * 1 * * "
         }
       },
       {
@@ -200,7 +200,7 @@
           "cron_job": "/cron/monthly",
           "title": "monthly",
           "action_type": "web",
-          "when": "@monthly  "
+          "when": "* * * */1  * "
         }
       },
       {
