@@ -5,7 +5,7 @@
       "major": 1,
       "minor": 0
     },
-    "origin": "Engines Developer Studio 1.0"
+    "origin": "Engines Developer Studio 0.2"
   },
   "metadata": {
     "blueprint": {
@@ -14,67 +14,49 @@
         "minor": 1,
         "level": "rc",
         "patch": 0
-      },
-      "timestamp": null
+      }
     },
     "software": {
       "display": {
         "title": "elgg  social networking engine",
         "label": "elgg",
-        "version": "",
         "description": "A powerful open source social networking engine",
         "url": "https://elgg.org/index.php"
       },
       "license": {
-        "label": "GPL v2",
-        "url": ""
+        "label": "GPL v2"
       }
-    }
+    },
+    "timestamp": "2017-06-09 08:20:33 UTC"
   },
   "software": {
     "base": {
       "name": "elgg",
       "framework": "apache_php",
+      "deployment_type": "web",
+      "http_protocol": "http_and_https",
       "memory": {
         "required": 96,
         "recommended": 128
       },
-      "http_protocol": "http_and_https",
-      "framework_port_override": "",
-      "deployment_type": "web",
-      "web_root_directory": "",
-      "continuous_deployment": false,
-      "install_form_comment": "",
       "first_run_url": "_Engines_Builder(http_protocol)://_Engines_Builder(fqdn)/install.php",
       "installation_report": "goto _Engines_Builder(http_protocol)://_Engines_Builder(fqdn)/install.php\r\n**Database installation**\r\n\r\nDatabase Username _Engines_Environment(dbuser)\r\nDatabase name _Engines_Environment(dbname)\r\nDatabase Password _Engines_Environment(dbpasswd)\r\nDatabase Host _Engines_Environment(dbhost)\r\nPort leave blank\r\nDatabase prefix table elgg_\r\nSelect your time zone\r\n\r\nClick Next \r\n\r\n**Configure site**\r\nSet your \r\nSite Name\r\nand\r\nSite Email Address\r\nleave Site URL as in\r\nData Directory is /home/fs/persistent/\r\n\r\nSet your desired Default Site Access\r\n\r\n**Create admin account**"
     },
-    "ports": [
-
-    ],
     "scripts": {
       "start": {
-        "language": "sh",
-        "content": ""
+        "language": "sh"
       },
       "install": {
-        "language": "sh",
-        "content": ""
+        "language": "sh"
       },
       "post_install": {
         "language": "sh",
         "content": "#!/bin/bash\r\n\r\ncp /home/app/elgg-config/settings.php /home/fs/config\r\nrm /home/app/elgg-config/settings.php\r\nln -s /home/fs/config/settings.php /home/app/elgg-config/settings.php"
       },
       "shutdown": {
-        "language": "sh",
-        "content": ""
+        "language": "sh"
       }
     },
-    "external_repositories": [
-
-    ],
-    "system_packages": [
-
-    ],
     "installed_packages": [
       {
         "name": "elgg-2.3.1.zip",
@@ -87,8 +69,7 @@
     "required_modules": [
       {
         "name": "rewrite",
-        "type": "apache",
-        "os_package": ""
+        "type": "apache"
       },
       {
         "name": "curl",
@@ -168,7 +149,7 @@
         "type_path": "cron",
         "variables": {
           "cron_job": "hourly",
-          "title": "/cron/hourly",
+          "title": "hourly",
           "action_type": "web",
           "when": "* */1 * * * "
         }
@@ -226,62 +207,14 @@
         }
       }
     ],
-    "environment_variables": [
-
-    ],
-    "template_files": [
-
-    ],
-    "replacement_strings": [
-
-    ],
     "database_seed": {
-      "language": "text",
-      "content": "",
-      "script": false
+      "language": "text"
     },
     "file_write_permissions": [
       {
         "path": "elgg-config",
         "recursive": true
       }
-    ],
-    "persistent_directories": [
-
-    ],
-    "persistent_files": [
-
-    ],
-    "components": {
-      "sources": [
-
-      ],
-      "path": "",
-      "extract": false
-    },
-    "workers": {
-      "blocking": "",
-      "commands": [
-
-      ]
-    },
-    "rake_tasks": [
-
-    ],
-    "custom_php_inis": [
-
-    ],
-    "apache_htaccess_files": [
-
-    ],
-    "apache_httpd_configurations": [
-
-    ],
-    "actionators": [
-
-    ],
-    "schedules": [
-
     ]
   }
 }
