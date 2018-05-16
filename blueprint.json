@@ -27,7 +27,7 @@
         "label": "GPL v2"
       }
     },
-    "timestamp": "2018-05-16T16:54:11+10:00"
+    "timestamp": "2018-05-16T17:00:01+10:00"
   },
   "software": {
     "base": {
@@ -59,11 +59,11 @@
     },
     "installed_packages": [
       {
-        "name": "elgg-2.3.1.zip",
-        "source_url": "https://elgg.org/getelgg.php?forward=elgg-2.3.1.zip",
+        "name": "elgg-2.3.6.zip",
+        "source_url": "https://elgg.org/getelgg.php?forward=elgg-2.3.6.zip",
         "destination": "/home/app/",
         "extraction_command": "unzip",
-        "path_to_extracted": "elgg-2.3.1"
+        "path_to_extracted": "elgg-2.3.6"
       }
     ],
     "required_modules": [
