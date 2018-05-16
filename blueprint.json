@@ -2,8 +2,8 @@
   "schema": {
     "type": "app_blueprint",
     "version": {
-      "major": 1,
-      "minor": 0
+      "major": 0,
+      "minor": 1
     },
     "origin": "Engines Developer Studio 0.2"
   },
@@ -27,7 +27,7 @@
         "label": "GPL v2"
       }
     },
-    "timestamp": "2017-06-09 08:20:33 UTC"
+    "timestamp": "2018-05-16T16:54:11+10:00"
   },
   "software": {
     "base": {
@@ -82,12 +82,10 @@
         "publisher_namespace": "EnginesSystem",
         "type_path": "database/sql/mysql",
         "variables": {
-          "name": "_Engines_Builder(engine_name)",
-          "database_host": "_Engines_System(mysql_host)",
           "database_name": "_Engines_Builder(engine_name)",
+          "database_host": "_Engines_System(mysql_host)",
           "db_username": "_Engines_Builder(engine_name)",
           "db_password": "_Engines_System(random(10))",
-          "db_flavor": "mysql2",
           "collation": "utf8_general_ci",
           "full_access": "0"
         }
@@ -108,10 +106,11 @@
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
+          "action_type": "web",
           "cron_job": "/cron/minute",
           "title": "1min",
-          "action_type": "web",
-          "when": "*/1 * * * *"
+          "when": "*/1 * * * *",
+          "notification_address": "default"
         }
       },
       {
@@ -121,77 +120,85 @@
           "action_type": "web",
           "cron_job": "/cron/fiveminute",
           "title": "5min",
-          "when": "*/5 * * * * "
+          "when": "*/5 * * * * ",
+          "notification_address": "default"
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
+          "action_type": "web",
           "cron_job": "/cron/fifteenmin/",
           "title": "15min",
-          "action_type": "web",
-          "when": "*/15 * * * * "
+          "when": "*/15 * * * * ",
+          "notification_address": "default"
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
+          "action_type": "web",
           "cron_job": "/cron/halfhour/",
           "title": "halfhr",
-          "action_type": "web",
-          "when": "*/30 * * * *"
+          "when": "*/30 * * * *",
+          "notification_address": "default"
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
+          "action_type": "web",
           "cron_job": "hourly",
           "title": "hourly",
-          "action_type": "web",
-          "when": "* */1 * * * "
+          "when": "* */1 * * * ",
+          "notification_address": "default"
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
+          "action_type": "web",
           "cron_job": "/cron/daily",
           "title": "daily",
-          "action_type": "web",
-          "when": "* * */1 * * *"
+          "when": "* * */1 * * *",
+          "notification_address": "default"
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
+          "action_type": "web",
           "cron_job": "/cron/weekly",
           "title": "weekly",
-          "action_type": "web",
-          "when": "* * * 1 * * "
+          "when": "* * * 1 * * ",
+          "notification_address": "default"
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
+          "action_type": "web",
           "cron_job": "/cron/monthly",
           "title": "monthly",
-          "action_type": "web",
-          "when": "* * * */1  * "
+          "when": "* * * */1  * ",
+          "notification_address": "default"
         }
       },
       {
         "publisher_namespace": "EnginesSystem",
         "type_path": "cron",
         "variables": {
+          "action_type": "web",
           "cron_job": "/cron/yearly",
           "title": "yearly",
-          "action_type": "web",
-          "when": "@yearly  "
+          "when": "@yearly  ",
+          "notification_address": "default"
         }
       },
       {
